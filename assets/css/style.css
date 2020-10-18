@@ -733,8 +733,13 @@ section {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-family: cagatintas;
   color: #cda45e;
+
+  background: -webkit-linear-gradient(left top, #80c19e, #1dd095d9);
+  background: linear-gradient(to bottom right, #80c19e, #1dd095d9);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;  
 }
 
 /*--------------------------------------------------------------
