@@ -1068,7 +1068,8 @@ font-size: 13px;
   text-transform: uppercase;
   color: #444444;
   transition: all 0.3s ease-in-out;
-  border: 2px solid #fff;
+  border: 2px solid #bfd6cc2b;
+  border-radius: 50px;
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
