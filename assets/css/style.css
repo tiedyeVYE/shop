@@ -6,7 +6,18 @@
 */
 
 
+.borderpride {
+    animation: ColorPride 4s ease infinite;
+}
 
+  @keyframes BorderPride {
+    0% {border-color: #FFD800}
+    25% {border-color: #FF3C35;}
+    50% {border-color: #A33EFF;}
+    75% {border-color: #42B0FF;}
+    85% {border-color: #60FFAA;}
+    100% {border-color: #FFD800;}
+  }
 .pride {
     animation: ColorPride 4s ease infinite;
 }
@@ -126,57 +137,6 @@ h1, h2, h3, h4, h5, h6 {
     transition-delay: 0 !important;
   }
 }
-
-/*--------------------------------------------------------------
-# Top Bar
---------------------------------------------------------------*/
-#topbar {
-  height: 40px;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-
-#topbar.topbar-scrolled {
-  top: -40px;
-}
-
-#topbar .contact-info {
-  color: white;
-}
-
-#topbar .contact-info i {
-  color: #d9ba85;
-  padding-right: 4px;
-}
-
-#topbar .contact-info i + i {
-  margin-left: 15px;
-}
-
-#topbar .languages ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: #cda45e;
-}
-
-#topbar .languages ul a {
-  color: white;
-}
-
-#topbar .languages ul li + li {
-  padding-left: 10px;
-}
-
-#topbar .languages ul li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: rgba(255, 255, 255, 0.5);
-  content: "/";
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -197,12 +157,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo {
   font-size: 28px;
-  margin: 0;
+  margin: 0 0 0 150px;
   padding: 0;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
+  display: none;
 }
 
 #header .logo a {
@@ -244,24 +205,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #d9ba85;
+  animation: ColorPride 4s ease infinite ;
 }
 
 .nav-menu .book-a-table a {
-  border: 2px solid #cda45e;
-  color: #fff;
-  border-radius: 50px;
-  padding: 8px 25px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 50px;
+    padding: 8px 25px;
+    transition: all 0.3s ease 0s;
+    animation: ColorPride 4s ease infinite , BorderPride 4s ease infinite ;
 }
 
 .nav-menu .book-a-table a:hover {
-  background: #cda45e;
-  color: #fff;
+  background: rgba(127, 137, 161, 0.25);
 }
 
 .nav-menu .drop-down ul {
@@ -712,7 +674,7 @@ section {
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 5px 0;
+  margin: 5px 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
@@ -933,99 +895,400 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Menu Section
---------------------------------------------------------------*/
-.menu #menu-flters {
-  padding: 0;
-  margin: 0 auto 0 auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-}
+# My Portfolio
 
-.menu #menu-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 12px 10px 12px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 10px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 50px;
-  font-family: "Playfair Display", serif;
-}
 
-.menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
-  color: #cda45e;
-}
-
-.menu #menu-flters li:last-child {
-  margin-right: 0;
-}
-
-.menu .menu-item {
-  margin-top: 50px;
-}
-
-.menu .menu-img {
-  width: 70px;
-  border-radius: 50%;
-  float: left;
-  border: 5px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu .menu-content {
-  margin-left: 85px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.menu .menu-content::after {
-  content: "......................................................................"
- "...................................................................."
- "....................................................................";
+.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
-  left: 20px;
-  right: 0;
-  top: -4px;
-  z-index: 1;
-  color: #bab3a6;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.menu .menu-content a {
-  padding-right: 10px;
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  font-weight: 700;
-  color: white;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
   transition: 0.3s;
 }
 
-.menu .menu-content a:hover {
-  color: #cda45e;
+.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #ffc041;
 }
 
-.menu .menu-content span {
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  padding: 0 10px;
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+--------------------------------------------------------------*/
+.vbox-title {
+    width: 100%;
+    height: auto;
+    float: left;
+    text-align: center;
+    line-height: 28px;
+    font-size: 18px;
+    padding: 6px 50px;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    left: 0;
+    z-index: 89;
+}
+
+.portfolio-wrap {
+text-align: center;
+margin-bottom: 0px;
+position: relative;
+overflow: visible ;
+}
+.portfolio-links {
+position: absolute;
+bottom: -50px;
+left: 20px;
+right: 20px;
+box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+background: #fff;
+padding: 20px 0;
+color: #2f4d5a;
+max-height: 115px;
+overflow: visible;
+transition: all 0.5s ease-in-out;
+opacity: 0;
+}
+@media (max-width: 900px) {
+.portfolio-links {
+opacity: 0.6;
+bottom: 0px;
+}
+}
+.portfolio-wrap:hover .portfolio-links {
+bottom: 0px;
+opacity: 1;
+}
+.portfolio-wrap:hover .linkytentradas {
+display: block;
+}
+.portfolio-info img {
+overflow: visible;
+}
+.portfolio-links .portfolio-info {
+max-height: 300px;
+}
+.portfolio-wrap h4 {
+font-weight: 700;
+margin-bottom: 10px;
+font-size: 16px;
+color: #2f4d5a;
+position: relative;
+padding-bottom: 10px;
+}
+.portfolio-wrap h4::after {
+content: '';
+position: absolute;
+display: block;
+width: 50px;
+height: 1px;
+background: #b1cbd7;
+bottom: 0;
+left: calc(50% - 25px);
+}
+.portfolio-wrap span {
+font-style: italic;
+display: block;
+font-size: 13px;
+}
+
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  font-size: 15px;
   font-weight: 600;
-  color: #cda45e;
+  line-height: 1;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: #444444;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #fff;
 }
 
-.menu .menu-ingredients {
-  margin-left: 85px;
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+animation: BorderPride 4s ease infinite , ColorPride 4s ease infinite;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.8s ease-in-out;
+}
+
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+.modal-open {
+  overflow: hidden;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+.modal.show .modal-dialog {
+  transform: none;
+  max-width: 800px;
+}
+.modal.modal-static .modal-dialog {
+  transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+  display: flex;
+  max-height: calc(100% - 1rem);
+}
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+  overflow: hidden;
+}
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+  flex-shrink: 0;
+}
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - 1rem);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  content: "";
+}
+.modal-dialog-centered.modal-dialog-scrollable {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+  max-height: none;
+}
+.modal-dialog-centered.modal-dialog-scrollable::before {
+  content: none;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-footer > * {
+  margin: 0.25rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg,
+.modal-xl {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1140px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio Modal
+--------------------------------------------------------------*/
+
+
+.portfolio-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+.portfolio-modal .modal-content {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+.portfolio-modal .modal-content h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.portfolio-modal .modal-content p.item-intro {
   font-style: italic;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.portfolio-modal .modal-content p {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.portfolio-modal .close-modal:hover {
+  opacity: 0.3;
 }
 
 /*--------------------------------------------------------------
