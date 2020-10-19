@@ -1,10 +1,3 @@
-/**
-* Template Name: Restaurantly - v1.1.0
-* Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 
 .invertir-color {
      -webkit-filter: invert(100%);
@@ -184,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   padding: 15px 0;
   top: 40px;
+  min-height: 58px;
 }
 
 #header.header-scrolled {
@@ -343,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: absolute;
-  right: 15px;
+  left: 15px;
   top: 15px;
   z-index: 9998;
   border: 0;
