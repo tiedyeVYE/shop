@@ -529,9 +529,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'cagatintas';
-  /* Antes de descargar el archivo, le decimos al buscador
-  que intente buscar en local la fuente con nombre
-  Cabin, Cabin Regular o Cabin-Regular */
   src: local('cagatintas'),
        local('cagatintas Regular'),
        local('cagatintas-Regular'),
@@ -679,7 +676,7 @@ background: #fff;
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 48px;
     line-height: 36px;
   }
   #hero h2 {
