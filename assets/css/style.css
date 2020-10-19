@@ -102,14 +102,23 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #cda45e;
-  border-bottom-color: #cda45e;
+  border-top-color: #FFD800;
+  border-bottom-color: #FFD800;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+  -webkit-animation: animate-preloader 1s linear infinite, PreloaderPride 4s ease infinite;
+  animation: animate-preloader 1s linear infinite, PreloaderPride 2s ease infinite;
 }
+
+  @keyframes PreloaderPride {
+    0% {border-top-color: #FFD800; border-bottom-color: #FFD800;}
+    25% {border-top-color: #FF3C35; border-bottom-color: #FF3C35;}
+    50% {border-top-color: #A33EFF; border-bottom-color: #A33EFF;}
+    75% {border-top-color: #42B0FF; border-bottom-color: #42B0FF;}
+    85% {border-top-color: #60FFAA; border-bottom-color: #60FFAA;}
+    100% {border-top-color: #FFD800; border-bottom-color: #FFD800;}
+  }
 
 @-webkit-keyframes animate-preloader {
   0% {
